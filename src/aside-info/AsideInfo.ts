@@ -1,4 +1,9 @@
-export class AsideInfo {
+export interface AsideInfo {
+	texts: string[];
+	title: string;
+}
+
+export class AsideInfoImpl implements AsideInfo{
 	public readonly texts: string[];
 	public readonly title: string;
 
@@ -8,6 +13,6 @@ export class AsideInfo {
 	}
 
 	public static of(title: string, texts: string[]): AsideInfo {
-		return new AsideInfo(title, texts);
+		return new AsideInfoImpl(title, texts);
 	}
 }

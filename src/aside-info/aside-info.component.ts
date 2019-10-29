@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AsideInfo } from './AsideInfo';
+import { AsideInfoService } from 'src/services/AsideInfo.service';
 
 @Component({
 	selector: 'aside-info-root',
@@ -7,5 +8,15 @@ import { AsideInfo } from './AsideInfo';
 	styleUrls: ['./aside-info.component.scss'],
 })
 export class AsideInfoComponent {
-	public allAsideInfo = [AsideInfo.of('title', ['tests', 'tests'])];
+	allAsideInfo = [];
+
+	constructor(
+		private asideInfoService: AsideInfoService
+	) {}
+
+	ngOnInit() {
+		this.asideInfoService.getInfo().subscribe((data: AsideInfo[]) => {
+			this.allAsideInfo = data;
+		});
+	}
 }
