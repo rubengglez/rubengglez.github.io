@@ -1,6 +1,22 @@
 [
-    {
-        "title": "mi primer titulo",
-        "texts": ["frase one", "frase dos"]
-    }
+	{
+		"title": "Skills",
+		"texts": [
+			"Always looking for new things to learn",
+			"Polyglot, I can write code in Javascript, Java or PHP, between others.",
+			"Adaptability"
+		]
+	},
+	{
+		"title": "Interest",
+		"texts": [
+			"Clean code",
+			"Testing",
+			"Any way that could improve software development process"
+		]
+	},
+	{
+		"title": "Languages",
+		"texts": ["Spanish (native)", "Galician (native)", "English (B1 – B2)", "French (A2)"]
+	}
 ]
