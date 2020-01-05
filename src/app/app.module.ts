@@ -13,10 +13,18 @@ import { GithubComponent } from 'src/github/github.component';
 import { SideProjectComponent } from 'src/side-project/side-project.component';
 import { EducationComponent } from 'src/education/education.component';
 
-// import {Router, RouterModule} from '@angular/router';
-
 @NgModule({
-	declarations: [AppComponent, TopComponent, ContentComponent, AsideInfoComponent, MenuComponent, ExperienceComponent, GithubComponent, SideProjectComponent, EducationComponent],
+	declarations: [
+		AppComponent,
+		TopComponent,
+		ContentComponent,
+		AsideInfoComponent,
+		MenuComponent,
+		ExperienceComponent,
+		GithubComponent,
+		SideProjectComponent,
+		EducationComponent,
+	],
 	imports: [BrowserModule, HttpClientModule, AppRoutingModule],
 	providers: [],
 	bootstrap: [AppComponent],

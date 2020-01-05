@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 const experienceUrl = '../assets/experiences.json';
 
@@ -9,7 +10,7 @@ const experienceUrl = '../assets/experiences.json';
 export class ExperienceService {
 	constructor(private httpClient: HttpClient) {}
 
-	public getExperiences() {
+	public getExperiences(): Observable<object> {
 		return this.httpClient.get(experienceUrl);
 	}
 }

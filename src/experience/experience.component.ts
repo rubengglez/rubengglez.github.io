@@ -12,7 +12,7 @@ export class ExperienceComponent {
 
 	constructor(private experienceServ: ExperienceService) {}
 
-	ngOnInit() {
+	ngOnInit(): void {
 		this.experienceServ.getExperiences().subscribe((data: Experience[]) => {
 			this.experiences = data;
 		});

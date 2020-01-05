@@ -10,11 +10,9 @@ import { AsideInfoService } from 'src/services/AsideInfo.service';
 export class AsideInfoComponent {
 	allAsideInfo = [];
 
-	constructor(
-		private asideInfoService: AsideInfoService
-	) {}
+	constructor(private asideInfoService: AsideInfoService) {}
 
-	ngOnInit() {
+	ngOnInit(): void {
 		this.asideInfoService.getInfo().subscribe((data: AsideInfo[]) => {
 			this.allAsideInfo = data;
 		});

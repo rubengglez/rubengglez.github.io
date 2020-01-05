@@ -19,18 +19,18 @@ const httpOptions = {
 export class GithubService {
 	constructor(private httpClient: HttpClient) {}
 
-	public getShortRepositoryInfo() {
+	public getShortRepositoryInfo(): Promise<FullApiInfo[]> {
 		return this.httpClient
 			.get(this.composeUrl(`users/${user}/repos`), httpOptions)
 			.toPromise()
 			.then(this.convertToShortGithub.bind(this));
 	}
 
-	private composeUrl(endpoint: string) {
+	private composeUrl(endpoint: string): string {
 		return `${githubApi}${endpoint}`;
 	}
 
-	private convertToShortGithub(data: FullApiInfo[]) {
+	private convertToShortGithub(data: FullApiInfo[]): FullApiInfo[] {
 		return data;
 	}
 }

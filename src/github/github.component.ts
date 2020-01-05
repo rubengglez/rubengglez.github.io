@@ -11,7 +11,7 @@ export class GithubComponent {
 
 	public constructor(private githubService: GithubService) {}
 
-	async ngOnInit() {
+	async ngOnInit(): Promise<void> {
 		this.shortGithubInfo = await this.githubService.getShortRepositoryInfo();
 	}
 }

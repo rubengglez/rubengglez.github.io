@@ -1,8 +1,8 @@
 export default interface FullApiInfo {
 	id: string;
 	url: string;
-	created_at: Date;
-	updated_at: Date;
+	createdAt: Date;
+	updatedAt: Date;
 	language: string;
 }
 
