@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GithubService } from 'src/types/Github.service';
+import { GithubService } from 'src/services/Github.service';
 
 @Component({
 	selector: 'github-root',
@@ -13,5 +13,7 @@ export class GithubComponent {
 
 	async ngOnInit(): Promise<void> {
 		this.shortGithubInfo = await this.githubService.getShortRepositoryInfo();
+		console.log(this.shortGithubInfo);
+		console.log('aaaaa');
 	}
 }
