@@ -1,19 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { GithubService } from 'src/services/Github.service';
+import ShortGithubInfo from 'src/types/ShortGithubInfo';
+import { Unsubscribable } from 'rxjs';
 
 @Component({
 	selector: 'github-root',
 	templateUrl: './github.component.html',
 	styleUrls: ['./github.component.scss'],
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class GithubComponent {
-	shortGithubInfo: any;
+export class GithubComponent implements OnInit {
+	private githubSubscription: Unsubscribable;
+	public shortGithubInfo: ShortGithubInfo[] = [];
 
-	public constructor(private githubService: GithubService) {}
+	public constructor(private githubService: GithubService, private cd: ChangeDetectorRef) {}
 
-	async ngOnInit(): Promise<void> {
-		this.shortGithubInfo = await this.githubService.getShortRepositoryInfo();
-		console.log(this.shortGithubInfo);
-		console.log('aaaaa');
+	ngOnInit(): void {
+		this.githubSubscription = this.githubService
+			.getShortRepositoryInfo()
+			.subscribe((data: ShortGithubInfo[]) => {
+				this.shortGithubInfo = data;
+				this.cd.markForCheck();
+			});
+	}
+
+	ngOnDestroy(): void {
+		this.githubSubscription.unsubscribe();
 	}
 }
