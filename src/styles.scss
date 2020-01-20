@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import './variables.scss';
+
+a {
+	color: black;
+
+	&:visited {
+		color: black !important;
+	}
+}
+
+@media (min-width: $smallMedium) {
+	.widthContainer {
+		padding: 0 !important;
+	}
+}

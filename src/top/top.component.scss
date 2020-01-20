@@ -1,29 +1,74 @@
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../variables.scss';
 
 .header {
-    &__photo {
-        &__img {
-            height: 150px;
-            width: 150px;
-            border-radius: 100%;
-        }
-    }
+	padding: 5%;
+	&__photo {
+		text-align: center;
+		&__img {
+			height: $heightPhoto;
+			width: $widthPhoto;
+			border-radius: 20%;
+			display: inline-block;
+		}
+	}
+
+	&__description {
+		padding: 2% 7% 0% 7%;
+	}
+
+	&__name {
+		font-weight: 900;
+		font-size: 2em;
+		text-align: center;
+		margin-bottom: 3%;
+		padding-top: 0;
+	}
+
+	&__summary {
+		font-weight: 500;
+		font-style: italic;
+		font-size: 1.3em;
+		text-align: center;
+	}
+
+	&__fulldescription {
+		margin-top: 7%;
+	}
+}
+
+@media (min-width: $smallMedium) {
+	.header {
+		&__photo {
+			&__img {
+			}
+		}
+
+		&__description {
+			padding: 3% 0;
+		}
+
+		&__name {
+		}
+
+		&__summary {
+		}
+
+		&__fulldescription {
+		}
+	}
 }
 
 @include media-breakpoint-up(sm) {
-
 }
 
 @include media-breakpoint-up(md) {
-
 }
 
 @include media-breakpoint-up(lg) {
-
 }
 
 @include media-breakpoint-up(xl) {
-
 }

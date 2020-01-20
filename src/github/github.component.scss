@@ -1,15 +1,44 @@
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
 @import '../../node_modules/bootstrap/scss/mixins';
+@import '../variables.scss';
 
-@include media-breakpoint-up(sm) {
+.github {
+	padding: 0 7%;
 }
 
-@include media-breakpoint-up(md) {
-}
+.repo {
+	margin-bottom: 15%;
 
-@include media-breakpoint-up(lg) {
-}
+	&:first-child {
+		margin-top: 10%;
+	}
 
-@include media-breakpoint-up(xl) {
+	&__NameLanguage {
+		display: flex;
+	}
+
+	&__name {
+		flex: 1;
+		font-weight: 700;
+		font-weight: 0.9em;
+	}
+
+	&__language {
+		flex: 1;
+		text-align: right;
+
+		& > img {
+			width: 45px;
+			height: 45px;
+		}
+	}
+
+	&__description {
+	}
+
+	&__link {
+		color: $orangeApp !important;
+		font-weight: 700;
+	}
 }

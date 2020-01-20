@@ -1,6 +1,42 @@
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
 @import '../../node_modules/bootstrap/scss/mixins';
+@import '../variables.scss';
+
+.menu {
+	margin-bottom: 5%;
+	&__li {
+		border-right: 1px black solid;
+		&:last-of-type {
+			border-right: 0px;
+		}
+	}
+
+	&__a {
+		color: black !important;
+		font-weight: 700;
+		&--active {
+			text-decoration: underline;
+			font-weight: 700;
+		}
+	}
+}
+
+@media (min-width: $smallMedium) {
+	.menu {
+		margin-bottom: 8%;
+		&__li {
+			&:last-of-type {
+			}
+		}
+
+		&__a {
+			font-size: 1.2em;
+			&--active {
+			}
+		}
+	}
+}
 
 @include media-breakpoint-up(sm) {
 }
