@@ -1,6 +1,7 @@
 @import '../../node_modules/bootstrap/scss/functions';
 @import '../../node_modules/bootstrap/scss/variables';
 @import '../../node_modules/bootstrap/scss/mixins';
+@import '../variables.scss';
 
 .aside-info {
 	display: none;
@@ -15,6 +16,20 @@
 }
 
 @include media-breakpoint-up(md) {
+	.aside-info {
+		display: block;
+		&__container {
+			margin-bottom: 20%;
+			padding-right: 5%;
+		}
+
+		&__title {
+			color: $orangeApp;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 0.9em;
+		}
+	}
 }
 
 @include media-breakpoint-up(lg) {

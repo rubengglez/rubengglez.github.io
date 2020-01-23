@@ -4,7 +4,7 @@
 @import '../variables.scss';
 
 .menu {
-	margin-bottom: 5%;
+	margin-bottom: 8%;
 	&__li {
 		border-right: 1px black solid;
 		&:last-of-type {
@@ -16,8 +16,19 @@
 		color: black !important;
 		font-weight: 700;
 		&--active {
-			text-decoration: underline;
-			font-weight: 700;
+			position: relative;
+
+			&::after {
+				position: absolute;
+				height: 0;
+				width: 0;
+				border-bottom: 8px solid black;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				left: 45%;
+				bottom: -5px;
+				content: '';
+			}
 		}
 	}
 }
@@ -42,10 +53,47 @@
 }
 
 @include media-breakpoint-up(md) {
+	.menu {
+		&__li {
+			&:last-of-type {
+			}
+		}
+
+		&__a {
+			font-size: 1em;
+			&--active {
+			}
+		}
+	}
 }
 
 @include media-breakpoint-up(lg) {
+	.menu {
+		&__li {
+			&:last-of-type {
+			}
+		}
+
+		&__a {
+			font-size: 1.3em;
+			&--active {
+			}
+		}
+	}
 }
 
 @include media-breakpoint-up(xl) {
+	.menu {
+		margin-top: -8%;
+		&__li {
+			&:last-of-type {
+			}
+		}
+
+		&__a {
+			font-size: 1.4em;
+			&--active {
+			}
+		}
+	}
 }
