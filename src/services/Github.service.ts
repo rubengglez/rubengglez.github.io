@@ -25,7 +25,7 @@ export class GithubService {
 	public getShortRepositoryInfo(): Observable<ShortGithubInfo[]> {
 		return this.httpClient
 			.get(this.composeUrl(`users/${user}/repos`), httpOptions)
-			.pipe(map(this.convertToShortGithub.bind(this)));
+			.pipe(map(this.convertToShortGithub.bind(this)), map(this.sortByUpdate.bind(this)));
 	}
 
 	private composeUrl(endpoint: string): string {
@@ -34,6 +34,17 @@ export class GithubService {
 
 	private convertToShortGithub(data: GithubRepoData[]): ShortGithubInfo[] {
 		return data.map(this.toShortGithub.bind(this));
+	}
+
+	private sortByUpdate(data: ShortGithubInfo[]): ShortGithubInfo[] {
+		return data.sort((a: ShortGithubInfo, b: ShortGithubInfo): number => {
+			if (a.updatedAt < b.updatedAt) {
+				return 1;
+			} else if (a.updatedAt > b.updatedAt) {
+				return -1;
+			}
+			return 0;
+		});
 	}
 
 	private toShortGithub(data: GithubRepoData): ShortGithubInfo {
