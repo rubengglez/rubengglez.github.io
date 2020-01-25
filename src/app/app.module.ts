@@ -12,6 +12,7 @@ import { ExperienceComponent } from 'src/experience/experience.component';
 import { GithubComponent } from 'src/github/github.component';
 import { SideProjectComponent } from 'src/side-project/side-project.component';
 import { EducationComponent } from 'src/education/education.component';
+import { SocialComponent } from 'src/social/social.component';
 
 @NgModule({
 	declarations: [
@@ -24,6 +25,7 @@ import { EducationComponent } from 'src/education/education.component';
 		GithubComponent,
 		SideProjectComponent,
 		EducationComponent,
+		SocialComponent,
 	],
 	imports: [BrowserModule, HttpClientModule, AppRoutingModule],
 	providers: [],

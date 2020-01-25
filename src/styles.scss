@@ -9,6 +9,13 @@ a {
 	}
 }
 
+.sideTitle {
+	color: $orangeApp;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 0.9em;
+}
+
 @media (min-width: $smallMedium) {
 	.widthContainer {
 		padding: 0 !important;
