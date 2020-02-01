@@ -37,6 +37,7 @@
 		"@types/sinon": "^7.5.1",
 		"@typescript-eslint/eslint-plugin": "^2.14.0",
 		"@typescript-eslint/parser": "^2.5.0",
+		"angular-cli-ghpages": "^0.6.2",
 		"codelyzer": "^5.0.0",
 		"eslint": "^6.5.1",
 		"jasmine-core": "~3.4.0",
