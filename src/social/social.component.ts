@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
 @Component({
 	selector: 'social',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 	styleUrls: ['./social.component.scss'],
 })
 export class SocialComponent {
-	public constructor() {}
+	public constructor(@Inject('baseUrl') public baseUrl: string) {}
 }

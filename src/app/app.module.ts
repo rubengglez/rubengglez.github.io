@@ -13,6 +13,7 @@ import { GithubComponent } from 'src/github/github.component';
 import { SideProjectComponent } from 'src/side-project/side-project.component';
 import { EducationComponent } from 'src/education/education.component';
 import { SocialComponent } from 'src/social/social.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
 	declarations: [
@@ -28,7 +29,7 @@ import { SocialComponent } from 'src/social/social.component';
 		SocialComponent,
 	],
 	imports: [BrowserModule, HttpClientModule, AppRoutingModule],
-	providers: [],
+	providers: [{ provide: 'baseUrl', useValue: environment.baseUrl }],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}
