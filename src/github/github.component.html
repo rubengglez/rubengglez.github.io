@@ -4,7 +4,9 @@
 			<span class="repo__name repoName">{{ githubInfo.name }}</span>
 			<span class="repo__language">
 				<img
-					src="../assets/images/languages/{{ githubInfo.language | lowercase }}.png"
+					src="{{ baseUrl }}/assets/images/languages/{{
+						githubInfo.language | lowercase
+					}}.png"
 					alt="{{ githubInfo.language | lowercase }}"
 				/>
 			</span>
