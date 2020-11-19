@@ -1,7 +1,15 @@
 [
 	{
+		"company": "Factorial HR - FullStack developer",
+		"date": "April 2020 - Now",
+		"texts": [
+			"Working in the development of the company's HHRR app. As FullStack developer, and as my collegues, I'm responsable of implementing new features in the product developing the backend part and the frontend part altogether.",
+			"Our stack is mainly Ruby (Ruby on Rails framework) and ReactJs with MobX. Also I had to learn React Native to update the company's HHRR mobile app. I've worked as well with DatoCMS to maintain the public pages that compounds the company's web."
+		]
+	},
+	{
 		"company": "Quobis S.L.U. - Backend developer",
-		"date": "June 2016 - Now",
+		"date": "June 2016 - April 2020",
 		"texts": [
 			"Working in the development of backend services using mainly technologies like Javascript/Typescript over Node.js, mongoDB and RabbitMQ. As well, I have been working with Angular in frontend part. Use of Docker when using it in development and knowlegde of Asterisk server as requirement of the company product.",
 			"I gained experience in TDD (Test Driven Development) and DDD (Domain Driven Design)",
